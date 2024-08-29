@@ -26,16 +26,21 @@ export default function App() {
     }
   }
 
-  const countPlus = product => {
-    product.count++
+  const countPlus = id => {
+    let find = basket.find(elm => elm.id === id)
+    if(find) {
+      find.count++
+    }
     setBasket([...basket])
   }
 
-  const countMinus = product => {
-    if(product.count === 1) {
-      product.count = 1
+  const countMinus = id => {
+    let find = basket.find(elm => elm.id == id)
+
+    if(find && find.count == 1) {
+      find.conut = 1
     }else {
-      product.count--
+      find.count--
     }
     setBasket([...basket])
   }

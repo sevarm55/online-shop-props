@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react"
 import { BasketItem } from "./BasketItem"
 
+=======
+import { BasketItem } from "./BasketItem"
+
+
+>>>>>>> 6c59a953d4b7a3f57ee08d1b4ac55f8b17970714
 export const Basket = ({cart, onCountPlus,onCountMinus,onDelete}) => {
     
     const [total,setTotal] = useState(0)
@@ -27,12 +33,18 @@ export const Basket = ({cart, onCountPlus,onCountMinus,onDelete}) => {
                 </tr>
             </thead>
             <tbody>
+<<<<<<< HEAD
                 <BasketItem 
                     cart={cart} 
                     key={cart.id}
                     onCountMinus={onCountMinus} 
                     onCountPlus={onCountPlus} 
                     onDelete={onDelete} />
+=======
+                {
+                    cart.map(elm => <BasketItem key={elm.id} {...elm} onCountMinus={onCountMinus} onCountPlus={onCountPlus} onDelete={onDelete} />)
+                }
+>>>>>>> 6c59a953d4b7a3f57ee08d1b4ac55f8b17970714
             </tbody>
         </table>
         </div>
