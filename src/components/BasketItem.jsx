@@ -13,8 +13,8 @@ export const BasketItem = ({cart ,onCountMinus, onCountPlus, onDelete}) => {
                         gap: "4px",
                     }}
                     >
-                        <button onClick={() => onCountMinus(elm)} className="btn btn-outline-info">-</button>
-                        <button onClick={() => onCountPlus(elm)} className="btn btn-outline-info">+</button>
+                        <button onClick={() => onCountMinus(elm.id)} className="btn btn-outline-info">-</button>
+                        <button onClick={() => onCountPlus(elm.id)} className="btn btn-outline-info">+</button>
                         <button onClick={() => onDelete(elm.id)} className="btn btn-outline-info">x</button>
                     </td>
             </tr>)
